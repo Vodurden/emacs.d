@@ -5,3 +5,4 @@
 
 ;; Config
 (require 'init-themes)
+(require 'init-evil)
