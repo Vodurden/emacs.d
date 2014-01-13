@@ -6,3 +6,4 @@
 ;; Config
 (require 'init-themes)
 (require 'init-evil)
+(require 'init-quack)
