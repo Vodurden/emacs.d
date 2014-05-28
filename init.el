@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/config")
 
 ;; Bootstrapping
 (require 'init-elpa)    ;; Provides require-package
