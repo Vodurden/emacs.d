@@ -2,8 +2,11 @@
 
 ;; Bootstrapping
 (require 'init-elpa)    ;; Provides require-package
+(require 'init-util)
 
-;; Config
+;; General Config
 (require 'init-themes)
-(require 'init-evil)
-(require 'init-quack)
+(require 'init-editing)
+
+;; Language Specific Config
+(require 'init-haskell)
