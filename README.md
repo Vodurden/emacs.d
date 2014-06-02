@@ -1,0 +1,3 @@
+# Dependencies:
+## Cabal
+* ghc-mod
