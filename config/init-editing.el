@@ -43,5 +43,11 @@
 
 ;;;; Projectile
 (require-package 'projectile)
+(projectile-global-mode)
+
+; Force native indexing so .gitignore is respected
+(setq projectile-indexing-method 'native)
+
+(require-package 'helm-projectile)
 
 (provide 'init-editing)
