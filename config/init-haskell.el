@@ -14,6 +14,9 @@
 ;; Make :w in evil save properly
 (add-hook 'haskell-mode-hook (lambda() (evil-ex-define-cmd "w[rite]" 'ghc-save-buffer)))
 
+;; Start in insert mode for haskell terminal
+(evil-set-initial-state 'inferior-haskell-mode 'emacs)
+
 (provide 'init-haskell)
 
 
