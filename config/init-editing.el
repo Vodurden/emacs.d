@@ -33,6 +33,7 @@
     (evil-set-initial-state mode 'emacs))
 
 ;;;; Helm 
+(require-package 'helm)
 (setq helm-command-prefix-key "C-c h")
 (setq helm-quick-update t)
 (setq helm-bookmark-show-location t)
