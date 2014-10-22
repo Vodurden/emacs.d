@@ -1,3 +1,38 @@
+;;;; Emacs Configuration
+;; Remove trailing whitespace before saving a file
+(add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
+
+;; Save backups in a central file
+(setq
+ backup-by-copying t
+ backup-directory-alist
+   '(("." . "~/.backups"))
+ delete-old-versions t
+ kept-new-versions 6
+ kept-old-versions 2
+ version-control t)
+
+;; UTF-8 locales for everything!
+(set-language-environment 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; Indentation
+(setq-default tab-width 4 indent-tabs-mode nil) ;; Spaces instead of Tabs
+(define-key global-map (kbd "RET") 'newline-and-indent) ;; Auto indent on newline
+
+;; Show matching parenthesis
+(show-paren-mode t)
+
+;; Remeber the cursor position of files when reopening them
+(setq save-place-file "~/.emacs.d/saveplace")
+(setq-default save-place t)
+(require 'saveplace)
+
 ;;;; Auto-Complete config
 (require-package 'auto-complete)
 (require-package 'fuzzy)
@@ -31,24 +66,5 @@
 
 (dolist (mode dotemacs-evil-emacs-state-modes)
     (evil-set-initial-state mode 'emacs))
-
-;;;; Helm 
-(require-package 'helm)
-(setq helm-command-prefix-key "C-c h")
-(setq helm-quick-update t)
-(setq helm-bookmark-show-location t)
-(setq helm-buffers-fuzzy-matching t)
-
-(require 'helm-config)
-(helm-mode t)
-
-;;;; Projectile
-(require-package 'projectile)
-(projectile-global-mode)
-
-; Force native indexing so .gitignore is respected
-(setq projectile-indexing-method 'native)
-
-(require-package 'helm-projectile)
 
 (provide 'init-editing)
