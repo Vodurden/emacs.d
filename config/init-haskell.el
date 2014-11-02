@@ -16,6 +16,12 @@
 (add-hook 'haskell-mode-hook (lambda() (ghc-init)))
 (add-hook 'haskell-mode-hook (lambda() (add-to-list 'ac-sources 'ac-source-ghc-mod)))
 
+;;; company-ghc
+(require-package 'company-ghc)
+(add-hook 'haskell-mode-hook 'company-mode) ; Use company mode when in a haskell file
+(add-to-list 'company-backends 'company-ghc) ; Add ghc completions to company mode
+(custom-set-variables '(company-ghc-show-info t))
+
 ;;; Additional configuration
 ;; Make :w in evil save properly
 (add-hook 'haskell-mode-hook (lambda() (evil-ex-define-cmd "w[rite]" 'ghc-save-buffer)))
