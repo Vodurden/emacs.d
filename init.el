@@ -13,3 +13,4 @@
 ;; Language Specific Config
 (require 'init-haskell)
 (require 'init-csharp)
+(require 'init-elisp)
