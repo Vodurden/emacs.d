@@ -33,22 +33,16 @@
 (setq-default save-place t)
 (require 'saveplace)
 
-;;;; Auto-Complete config
-(require-package 'auto-complete)
-(require-package 'fuzzy)
-(require 'auto-complete)
-(require 'auto-complete-config)
+;;;; Comapny Mode config
+(require-package 'company)
+(require 'company)
 
-(setq ac-auto-show-menu t)
-(setq ac-auto-start t)
-(setq ac-quick-help-delay 0.3)
-(setq ac-quick-help-height 30)
-(setq ac-show-menu-immediately-on-auto-complete t)
-(setq ac-use-fuzzy t)
-
-(ac-config-default)
-
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20140208.653/dict")
+;; Integrate company mode with helm
+(after 'helm
+  (require-package 'helm-company)
+  (require 'helm-company)
+  (define-key company-mode-map (kbd "C-s") 'helm-company)
+  (define-key company-active-map (kbd "C-s") 'helm-company))
 
 ;;;; Evil config
 (require-package 'evil)
