@@ -45,6 +45,12 @@
   (define-key company-active-map (kbd "C-s") 'helm-company))
 
 ;;;; Evil config
+(require-package 'evil-leader) ; Leader needs to be before evil
+(require 'evil-leader)
+(global-evil-leader-mode)
+
+(evil-leader/set-leader "<SPC>")
+
 (require-package 'evil)
 (evil-mode t)
 

@@ -9,6 +9,7 @@
 (require 'init-themes)
 (require 'init-editing)
 (require 'init-navigation)
+(require 'init-global-keybinds)
 
 ;; Language Specific Config
 (require 'init-haskell)
