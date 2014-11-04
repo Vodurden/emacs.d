@@ -10,4 +10,9 @@
     `(eval-after-load ,feature
        '(progn ,@body))))
 
+; Dash - modern functional programming
+(require-package 'dash)
+(require-package 'dash-functional)
+(after 'dash 'dash-enable-font-lock) ; Syntax highlighting for dash
+
 (provide 'init-util)
