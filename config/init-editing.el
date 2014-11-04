@@ -37,6 +37,20 @@
 (require-package 'company)
 (require 'company)
 
+(setq company-idle-delay 0.2)
+(setq company-minimum-prefix-length 1)
+(setq completion-styles-alist '(initials basic partial-completion))
+
+;; Make tabs work for completion and indention
+;; See: http://www.emacswiki.org/CompanyMode#toc9
+(defun complete-or-indent ()
+  (interactive)
+  (if (company-manual-begin)
+      (company-complete-common)
+    (indent-according-to-mode)))
+
+(global-key-binding (kbd "<TAB>") 'complete-or-indent)
+
 ;; Integrate company mode with helm
 (after 'helm
   (require-package 'helm-company)
