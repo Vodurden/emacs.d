@@ -1,9 +1,3 @@
-;;;; Etags
-;; Automatic tag updating
-;(require-package 'ctags-update)
-;(autoload 'turn-on-ctags-auto-update-mode "ctags-update" "turn on `ctags-auto-update-mode'." t)
-;(require-package 'etags-table)
-
 ;;;; Helm
 (require-package 'helm)
 (setq helm-command-prefix-key "C-c h")
@@ -19,17 +13,6 @@
 (after 'projectile
   (require-package 'helm-projectile)
   (require 'helm-projectile))
-(global-set-key (kbd "M-x") 'helm-M-x)
-
-(defun helm-my-buffers ()
-  (interactive)
-  (helm-other-buffer '(helm-c-source-buffers-list
-               helm-c-source-elscreen
-               helm-c-source-projectile-files-list
-               helm-c-source-ctags
-               helm-c-source-recentf
-               helm-c-source-locate)
-             "*helm-my-buffers*"))
 
 ;;;; Projectile
 (require-package 'projectile)
