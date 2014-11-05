@@ -37,9 +37,8 @@
 (require-package 'company)
 (require 'company)
 
-(setq company-idle-delay 0.2)
-(setq company-minimum-prefix-length 1)
-(setq completion-styles-alist '(initials basic partial-completion))
+(setq company-idle-delay 0.1)
+(setq company-minimum-prefix-length 0)
 
 ;; Make tabs work for completion and indention
 ;; See: http://www.emacswiki.org/CompanyMode#toc9
