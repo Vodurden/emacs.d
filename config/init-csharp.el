@@ -1,3 +1,6 @@
+;; WORKAROUND: cl-* functions are depricated but csharp-mode still expects them. Remove when csharp mode is updated
+(require 'cl)
+
 ; csharp-mode
 (require-package 'csharp-mode)
 
