@@ -11,4 +11,8 @@
   "nn" 'helm-projectile-find-file      ; Navigate Project Files
   "nb" 'helm-buffers-list)             ; Navigate Buffers
 
+; Magit should be the same in all languages
+(evil-leader/set-key
+  "gs" 'magit-status)
+
 (provide 'init-global-keybinds)

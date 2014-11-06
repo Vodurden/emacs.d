@@ -9,6 +9,7 @@
 (require 'init-themes)
 (require 'init-editing)
 (require 'init-navigation)
+(require 'init-version-control)
 (require 'init-global-keybinds)
 
 ;; Language Specific Config
