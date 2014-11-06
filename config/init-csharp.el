@@ -16,7 +16,7 @@
 (add-hook 'csharp-mode-hook 'company-mode) ; Use company mode when in a haskell file
 (add-to-list 'company-backends 'company-omnisharp)
 
-
+; Key Bindings
 (add-hook 'csharp-mode-hook
     (evil-leader/set-key
       "ns" 'omnisharp-helm-find-symbols ; Navigate symbols

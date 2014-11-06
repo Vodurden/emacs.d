@@ -10,6 +10,7 @@
 (require 'init-editing)
 (require 'init-navigation)
 (require 'init-version-control)
+(require 'init-diagnostics)
 (require 'init-global-keybinds)
 
 ;; Language Specific Config
