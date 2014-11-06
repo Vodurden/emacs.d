@@ -16,8 +16,11 @@
 (add-hook 'csharp-mode-hook 'company-mode) ; Use company mode when in a haskell file
 (add-to-list 'company-backends 'company-omnisharp)
 
-; Keybindings
-(evil-leader/set-key
-  "ns" 'omnisharp-helm-find-symbols) ; Navigate symbols
+
+(add-hook 'csharp-mode-hook
+    (evil-leader/set-key
+      "ns" 'omnisharp-helm-find-symbols ; Navigate symbols
+      "c" 'projectile-compile-project)) ; Compile
+
 
 (provide 'init-csharp)
