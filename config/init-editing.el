@@ -37,7 +37,7 @@
 (require-package 'company)
 (require 'company)
 
-(setq company-idle-delay 0.1)
+(setq company-idle-delay 1)
 (setq company-minimum-prefix-length 1)
 
 ;; Make tabs work for completion and indention
@@ -65,6 +65,7 @@
 (evil-leader/set-leader "<SPC>")
 
 (require-package 'evil)
+(require 'evil)
 (evil-mode t)
 
 (setq evil-search-module 'evil-search)

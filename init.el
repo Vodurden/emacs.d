@@ -5,15 +5,15 @@
 (require 'init-elpa)    ;; Provides require-package
 (require 'init-util)
 
-;; General Config
-(require 'init-themes)
-(require 'init-editing)
-(require 'init-navigation)
-(require 'init-version-control)
-(require 'init-diagnostics)
-(require 'init-global-keybinds)
-
 ;; Language Specific Config
 (require 'init-haskell)
 (require 'init-csharp)
 (require 'init-elisp)
+
+;; General Config
+(require 'init-themes)
+(require 'init-navigation)
+(require 'init-version-control)
+(require 'init-diagnostics)
+(require 'init-editing)
+(require 'init-global-keybinds)

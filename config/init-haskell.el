@@ -13,21 +13,22 @@
 (require-package 'ghc)
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda() (ghc-init)))
-(add-hook 'haskell-mode-hook (lambda() (add-to-list 'ac-sources 'ac-source-ghc-mod)))
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
 ;;; company-ghc
-(require-package 'company-ghc)
-(add-hook 'haskell-mode-hook 'company-mode) ; Use company mode when in a haskell file
-(add-to-list 'company-backends 'company-ghc) ; Add ghc completions to company mode
-(custom-set-variables '(company-ghc-show-info t))
+(after 'company
+  (require-package 'company-ghc)
+  (add-hook 'haskell-mode-hook 'company-mode) ; Use company mode when in a haskell file
+  (add-to-list 'company-backends 'company-ghc) ; Add ghc completions to company mode
+  (custom-set-variables '(company-ghc-show-info t)))
 
 ;;; Additional configuration
-;; Make :w in evil save properly
-(add-hook 'haskell-mode-hook (lambda() (evil-ex-define-cmd "w[rite]" 'ghc-save-buffer)))
+(after 'evil
+  ;; Make :w in evil save properly
+  (add-hook 'haskell-mode-hook (lambda() (evil-ex-define-cmd "w[rite]" 'ghc-save-buffer))))
 
-;; Start in insert mode for haskell terminal
-(evil-set-initial-state 'inferior-haskell-mode 'emacs)
-(evil-set-initial-state 'interactive-haskell-mode 'emacs)
+  ;; Start in insert mode for haskell terminal
+  ;(evil-set-initial-state 'inferior-haskell-mode 'emacs)
+  ;(evil-set-initial-state 'interactive-haskell-mode 'emacs))
 
 (provide 'init-haskell)
