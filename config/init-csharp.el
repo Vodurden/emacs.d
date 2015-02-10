@@ -19,8 +19,9 @@
 
 ; Key Bindings
 (add-hook 'csharp-mode-hook
-    (evil-leader/set-key
-      "ns" 'omnisharp-helm-find-symbols ; Navigate symbols
-      "c" 'projectile-compile-project)) ; Compile
+          (lambda ()
+            (evil-leader/set-key
+              "ns" 'omnisharp-helm-find-symbols ; Navigate symbols
+              "cc" 'projectile-compile-project))) ; Compile
 
 (provide 'init-csharp)

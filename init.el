@@ -9,6 +9,7 @@
 (require 'init-haskell)
 (require 'init-csharp)
 (require 'init-elisp)
+(require 'init-org-mode)
 
 ;; General Config
 (require 'init-themes)
