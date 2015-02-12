@@ -12,11 +12,6 @@
 (require-package 'omnisharp)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
 
-;; Company mode integration to omnisharp
-(after 'company
-  (add-hook 'csharp-mode-hook 'company-mode) ; Use company mode when in a haskell file
-  (add-to-list 'company-backends 'company-omnisharp))
-
 ; Key Bindings
 (add-hook 'csharp-mode-hook
           (lambda ()
