@@ -20,9 +20,10 @@
 (projectile-global-mode)
 
 ;; Force native indexing so .gitignore is respected
-(setq projectile-indexing-method 'native)
+(setq projectile-indexing-method 'alien)
 
-;; Always ignore node_modules
+;; Always ignore things we don't typically access in projects. We can
+;; still get to them through regular file browing.
 (add-to-list 'projectile-globally-ignored-directories "node_modules/")
 (add-to-list 'projectile-globally-ignored-directories ".bower-cache")
 
