@@ -16,6 +16,7 @@
 (require 'init-javascript)
 (require 'init-elisp)
 (require 'init-ruby)
+(require 'init-coffee)
 (require 'init-org-mode)
 
 ;; General Config
