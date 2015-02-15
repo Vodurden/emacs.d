@@ -15,6 +15,7 @@
 (require 'init-csharp)
 (require 'init-javascript)
 (require 'init-elisp)
+(require 'init-ruby)
 (require 'init-org-mode)
 
 ;; General Config
