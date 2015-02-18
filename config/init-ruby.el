@@ -2,6 +2,12 @@
 (require-package 'enh-ruby-mode)
 (require 'enh-ruby-mode)
 
+;; No more crazy indenting!
+(setq
+ enh-ruby-deep-indent-paren nil
+ enh-ruby-hanging-paren-deep-indent-level 2
+ enh-ruby-hanging-brace-deep-indent-level 2)
+
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 
