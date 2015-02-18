@@ -13,6 +13,9 @@
  kept-old-versions 2
  version-control t)
 
+;; No more #auto-save# files
+(setq auto-save-default nil)
+
 ;; UTF-8 locales for everything!
 (set-language-environment 'utf-8)
 (set-terminal-coding-system 'utf-8)
