@@ -17,8 +17,8 @@
   "nf" 'helm-find-files                ; Navigate Files
   "nn" 'helm-projectile-find-file      ; Navigate Project Files
   "nb" 'helm-buffers-list              ; Navigate Buffers
-  "nt" 'projectile-grep)               ; Navigate Text
-
+  "nT" 'projectile-grep                ; Navigate Search
+  "nt" 'neotree-toggle)                ; Navigate File Tree
 
 ; Magit should be the same in all languages
 (evil-leader/set-key

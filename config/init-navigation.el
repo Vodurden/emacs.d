@@ -29,4 +29,16 @@
 
 (require-package 'helm-projectile)
 
+;;;; NeoTree
+(require-package 'neotree)
+(require 'neotree)
+
+;; Projectile integration. Automatically switch neotree root when switching projects
+(setq projectile-switch-project-action 'neotree-projectile-action)
+
+(add-hook 'neotree-mode-hook
+          (lambda()
+            (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
 (provide 'init-navigation)
