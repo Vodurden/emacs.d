@@ -1,7 +1,7 @@
 ;; WORKAROUND: cl-* functions are depricated but csharp-mode still expects them. Remove when csharp mode is updated
 (require 'cl)
 
-; csharp-mode
+;;;; csharp-mode
 (require-package 'csharp-mode)
 
 ; omnisharp-emacs
@@ -12,11 +12,18 @@
 (require-package 'omnisharp)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
 
-; Key Bindings
+(setq omnisharp-imenu-support t)
+
+;; Key Bindings
 (add-hook 'csharp-mode-hook
           (lambda ()
             (evil-leader/set-key
               "ns" 'omnisharp-helm-find-symbols ; Navigate symbols
-              "cc" 'projectile-compile-project))) ; Compile
+              "nu" 'omnisharp-helm-find-usages ; Navigate usages
+              "cc" 'omnisharp-build-in-emacs ; Compile
+              "tt" 'omnisharp-unit-test-all ; Project Test
+              "tf" 'omnisharp-unit-test-fixture ; File Test
+              "ts" 'omnisharp-unit-test-single ; Single Test
+              )))
 
 (provide 'init-csharp)
