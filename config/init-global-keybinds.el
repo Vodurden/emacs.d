@@ -24,10 +24,4 @@
 (evil-leader/set-key
   "gs" 'magit-status)
 
-; Ace jump with <SPC><SPC>
-(evil-leader/set-key
-  "<SPC>w" 'evil-ace-jump-word-mode
-  "<SPC>c" 'evil-ace-jump-char-mode
-  "<SPC>l" 'evil-ace-jump-line-mode)
-
 (provide 'init-global-keybinds)

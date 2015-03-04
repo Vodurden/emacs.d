@@ -29,7 +29,4 @@
 
 (require-package 'helm-projectile)
 
-;;;; Ace Jump
-(require-package 'ace-jump-mode)
-
 (provide 'init-navigation)
