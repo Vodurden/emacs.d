@@ -13,7 +13,8 @@
  kept-old-versions 2
  version-control t)
 
-;; No more #auto-save# files
+
+;; We have backups and a compulsive save tick. We don't need autosave!
 (setq auto-save-default nil)
 
 ;; UTF-8 locales for everything!

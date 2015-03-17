@@ -20,7 +20,7 @@
 (projectile-global-mode)
 
 ;; Force native indexing so .gitignore is respected
-(setq projectile-indexing-method 'alien)
+(setq projectile-indexing-method 'native)
 
 ;; Always ignore things we don't typically access in projects. We can
 ;; still get to them through regular file browing.
