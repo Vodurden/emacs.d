@@ -1,9 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/config")
 
 ;; Bootstrapping
+(require 'init-encoding)
 (require 'init-constants)
 (require 'init-elpa)    ;; Provides require-package
 (require 'init-util)
+(require 'init-windows)
 
 ;; Language-Agnostic Config
 (require 'init-version-control)

@@ -10,6 +10,7 @@
   (evil-add-hjkl-bindings magit-status-mode-map 'emacs))
 
 ; Fullscreen magit status
+(setq magit-last-seen-setup-instructions "1.4.0")
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)
   ad-do-it
